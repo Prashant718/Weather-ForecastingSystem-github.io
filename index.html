@@ -1,0 +1,72 @@
+
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>Weather Forecasting System</title>
+ 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+			background-image:url("image3.jpg");
+        }
+ 
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+ 
+        h2 {
+            font-size: 85px;
+            font-family: serif;
+            color: transparent;
+            text-align: center;
+            animation: effect 2s linear infinite;
+            
+        }
+ 
+        @keyframes effect {
+            0% {
+                background: linear-gradient(
+                     red,green );
+                -webkit-background-clip: text;
+            }
+ 
+            100% {
+                background: linear-gradient(
+                       orange,#FF00FF);
+                -webkit-background-clip: text;
+            }
+        }
+    </style>
+	<script>
+var timerid=null;
+function Load()
+{
+if (timerid==null)
+{
+timerid=setTimeout("display()",10000);
+}
+}
+function display()
+{
+var x=window.open("home.html","Weather Forecasting System");
+window.close();
+ClearTimeout(timerid);
+
+}
+</script>
+</head>
+ 
+<body onload="Load()">
+    <div>
+        <h2> Weather Forecasting System !!!</h2>
+    </div>
+</body>
+ 
+</html>

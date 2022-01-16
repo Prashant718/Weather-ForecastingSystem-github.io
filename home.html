@@ -1,0 +1,399 @@
+<html>
+	<head>
+		<title>Weather Forecasting System</title>
+		<link rel="icon" href="icon.ico"> 
+		<style>
+		body 
+		{
+			margin:0; 
+			font-family: Arial, Helvetica, sans-serif;
+			<!--background-image:url("https://images.unsplash.com/photo-1529220100082-80957b04a221?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJlYXV0aWZ1bCUyMHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+			background-repeat: no-repeat;
+			background-size:1550px 661px;-->	
+		} 
+		
+		.topnav 
+		{
+			overflow: hidden;
+			position: fixed; 
+			top:0px; 
+			width:1540px; 
+			background-color: #333
+			  
+		}
+		.topnav a 
+		{
+		  float: left;
+		  color: red;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+		.topnav a:hover 
+		{
+			background-color:violet;
+			color:black;
+		}
+		
+		#heading
+		{
+			margin-top:2px;
+			border:2px solid red;
+			text-align:center;	
+			border-width:5px 25px 5px 25px; /*top,right,bottom,left */
+			color:green;
+			font-size:15px;
+			background-color:yellow;
+		}
+		marquee
+		{
+			margin-top:50px;
+			border:5px solid black;
+			background-color:black;
+			color:white; 
+		} 
+		.information 
+		{
+			margin-left:22px;
+			margin-top:2px;
+			width:350px;
+			border:5px solid GREEN ;
+			padding:10px;
+			background-color:pink;
+		}
+		#info
+		{
+			padding-top:15px;
+		}
+		li
+		{
+			font-family:Times New Roman;
+			font-size:20px;
+		}
+		#footer
+		{
+			position:fixed;  
+			left: 0px;  
+			right:0px; 
+			bottom:0px;
+			width:100%;  
+			height:auto;
+			background-color:black;  
+			color: white;  
+			border-top:0px solid black;
+			text-align: center; 
+		}
+		<!--
+		h2
+		{
+			
+			border:5px solid blue;	
+			border-radius:5px;
+			padding:5px;
+			margin:auto;
+			margin-top:5px;
+			width:70px;
+			text-align: center; 
+			color:blue;	
+		}-->
+		#info 
+		{
+			padding-left:10px;
+			margin-left:1px;
+			font-size:15px;
+		}
+		.ul
+		{
+			font-family:Times New Roman;
+			font-size:20px;
+		}
+		#whole
+		{
+			overflow:auto;
+			top:168px;
+			border:5px solid green ;
+			position:absolute;	
+			margin-left:410px;
+			width:1072px;
+			padding:10px;
+			bottom:70px;	
+			font-family:Times New Roman;
+			font-size:20px;
+		}
+		</style>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<div class="topnav"	>
+			<a href="home.html">Home</a>
+			<a href="MainWindow.html" target="_blank">Check Weather</a>
+			<a href="about.html" target="_blank">About Us</a>
+		</div>
+		<marquee direction="right" behavior="alternate"><strong>Welcome , Hope you like our Project</strong></marquee>
+		<div id="heading" onmouseover="over_heading()" onmouseout="out_heading()">
+			<h1>WEATHER FORECASTING SYSTEM</h1>
+		</div>  
+		
+		<div class="information">
+		<div id="info">
+			<br><li class="li"><a href="https://en.wikipedia.org/wiki/List_of_weather_records" target="_blank">Country wise list of Weather Records</a></li>
+			<br><li><button id="b2" onclick="change()">All Information</button></li>
+			<br><li><button id="b1" onclick="change_info1()">Weather Forecast Instruments</button></li>
+		</div>
+		</div>
+		
+		<div id="whole">
+		<div id="History">
+		<dd>Weather simply refers to the condition of air on the earth at a given place and time. It
+			is a continuous, data-intensive, multidimensional, dynamic and chaotic process. These
+			properties make weather forecasting is a formidable challenge. Forecasting is the process
+			of estimation in unknown situations from the historical data<br><br>	
+		</dd>
+		<dt style="background-color:pink;">TRADITIONAL WEATHER FORECASTING
+			<dd>
+			<br>Weather forecasting is the application of science and technology to predict the
+			state of the atmosphere for a given location. Weather forecasts are made by collecting
+			quantitative data about the current state of the atmosphere and using scientific
+			understanding of atmospheric processes to project how the atmosphere will evolve. There
+			are a variety of end users to weather forecasts. Weather warnings are important forecasts
+			because they are used to protect life and property. 
+			</dd>
+			<dd>
+			<br>In ancient times, forecasting was mostly based on weather pattern observation.
+			Over the years, the study of weather patterns has resulted in various techniques for
+			rainfall forecasting. Present rainfall forecasting embodies a combination of computer
+			models, interpretation, and an acquaintance of weather patterns. The following technique
+			was used for existing weather prediction. 
+			
+			<ul>
+			<li class="ul">Use of a barometer</li>
+			<li class="ul">Looking at the sky</li>
+			<li class="ul">Nowcasting</li>
+			<li class="ul">Analog technique</li>
+			<li class="ul">Numerical Weather Prediction model</li>
+			<li class="ul">Ensemble Forecasting</li>
+			<li class="ul">Radar</li>
+			<li class="ul">Weather satellites</li>
+			<li class="ul">Weather maps</li>
+			</ul>
+			</dd>
+		</dt>
+		<dt style="background-color:pink;">TYPES OF WEATHER FORECASTING
+		<dd>
+		<ul>
+		
+		<li class="ul"><mark>Persistence Forecasting</mark></li>
+		<dd>The simplest method of forecasting the weather is persistence forecasting. It relies
+		upon today's conditions to forecast the conditions tomorrow. This can be a valid way of
+			forecasting the weather when it is in a steady state, such as during the summer season in
+			the tropics. This method of forecasting strongly depends upon the presence of a stagnant
+			weather pattern. It can be useful in both short range forecasts and long range forecasts.
+			This assumes that what the weather is doing now is what it will continue to do. To find
+			out what the weather is doing, meteorologists make weather observations.
+		</dd>
+		<li class="ul"><mark>Synoptic Forecasting</mark></li>
+		<dd>
+		This method uses the basic rules for forecasting. Meteorologists take their
+		observations, and apply those rules to make a short-term forecast
+		</dd>
+		<li class="ul"><mark>Statistical Forecasting</mark></li>
+		<dd>
+		Meteorologists ask themselves, what does it usually do this time of the
+		year? Records of average temperatures, average rainfall and average snowfall over the
+		years give forecasters an idea of what the weather is "supposed to be like" at a certain
+		time of the year.
+		</dd>
+		<li class="ul"><mark>Computer forecasting</mark></li>
+		<dd>
+		Forecasters take their observations and plug the numbers into complicated
+		equations. Several ultra-high-speed computers run these various equations to make
+		computer "models" which give a forecast for the next several days. Often, different
+		equations produce different results, so meteorologists must always use the other
+		forecasting methods along with this one. 
+		</dd>
+		</ul>
+		</dd>
+		</dt>		
+		<dt style="background-color:pink;"> IMPORTANCE OF WEATHER FORECASTING
+		<dd>
+		<br>Weather forecasting is used in many situations like severe weather alerts and
+		advisories, predicting the behavior of the cloud for air transport, prediction of waterways
+		in a sea, agricultural development and avoiding forest fire.
+		</dd>
+		<dd>
+		<br><b>Severe weather alerts and advisories :</b>
+			<dd>
+			A major part of modern weather forecasting is the severe weather alerts and
+			advisories which are the national weather service’s issue in anticipation of severe or
+			hazardous weather are expected. This is done to protect life and property. Some of the
+			most commonly known of severe weather advisories are the severe thunderstorm and
+			tornado warning, as well as the severe thunderstorm and tornado watch. Other forms of
+			these advisories include winter weather, high wind, flood, tropical cyclone, and fog.
+			Severe weather advisories and alerts are broadcast through the media, including radio,
+			using emergency systems as the Emergency Alert System which breaks into regular
+			programming [LEB08]. 
+			</dd>
+		</dd>
+		
+		<dd>
+		<br><b>Predicting the behavior of the cloud for Air transport :</b>
+			<dd>
+			The aviation industry is especially sensitive to the weather and accurate weather
+			forecasting is essential. Fog or exceptionally low ceilings can prevent many aircraft from
+			landing and taking off. Turbulence and icing are also significant in-flight hazards.
+			Thunderstorms are a problem for all aircrafts because of severe turbulence due to their
+			updrafts and outflow boundaries, icing due to the heavy precipitation, as well as large
+			hail, strong winds, and lightning, all of which can cause severe damage to an aircraft in
+			flight. Volcanic ash is also a significant problem for aviation, as aircraft can lose engine
+			power within ash clouds [JRD06]. 
+			</dd>
+		</dd>
+		
+		<dd>
+		<br><b>Prediction of waterways in a sea :</b>
+			<dd>
+			Commercial and recreational use of waterways can be limited significantly by
+			wind direction, speed, wave periodicity, high tides and precipitation. These factors can
+			each influence the safety of marine transit. Consequently, a variety of codes have been
+			established to efficiently transmit detailed marine weather forecasts to vessel pilots via
+			radio, for example marine forecast. Typical weather forecasts can be received at sea
+			through the use of Radio fax.
+			</dd>
+		</dd>
+		
+		<dd>
+		<br><b>Agricultural development :</b>
+			<dd>
+			Weather plays an important role in agricultural production. It has a profound
+			influence on the growth, development and yields of a crop, incidence of pests and
+			diseases, water needs and fertilizer requirements in terms of differences in nutrient
+			mobilization due to water stresses and timeliness and effectiveness of prophylactic and
+			cultural operations on crops. <br>Weather aberrations may cause physical damage to crops and soil erosion. The quality of the crop produced during movement from field to
+			storage and transport to market depends on weather. Bad weather may affect the quality
+			of the produce during transport and viability and vigor of seeds and planting material
+			during storage.</li>
+			</ul>
+			</dd>
+		</dd>
+		
+		<dd>
+		<br><b>Avoiding Forest fire  :</b>
+			<dd>
+			Weather forecasting of wind, precipitations and humidity is essential for
+			preventing and controlling wildfires. Different indices, like the Forest fire weather index
+			and the Haines Index, have been developed to predict the areas more at risk to experience
+			fire from natural or human causes. Conditions for the development of harmful insects can
+			also be predicted by weather forecasting.
+			</ul>
+			</dd>
+		</dd>
+		
+		<dd>
+		<br><b>Military applications :</b>
+			<dd>
+			Military weather forecasters present weather conditions to the war fighter
+			community. Military weather forecasters provide pre-flight and in-flight weather briefs to
+			pilots and provide real time resource protection services for military installations. Naval
+			forecasters cover the waters and ship weather forecasts. The Navy provides a special
+			service to both themselves and the rest of the federal government by issuing forecasts for
+			tropical cyclone across the Pacific and Indian Oceans through their Joint Typhoon
+			Warning Center. 
+			</ul>
+			</dd>
+		</dd>
+		
+		<dd>
+		<br><b>Air Force :</b>
+			<dd>
+			Air Force Weather provides weather forecasting for the Air Force and the Army.
+			Air Force forecasters cover air operations in both wartime and peacetime operations and
+			provide Army support. Military and civilian forecasters actively cooperate in analyzing
+			and creating weather forecast products.<br><br>
+			</ul>
+			</dd>
+		</dd>
+		</dt>
+		</div>
+		
+		<div id=="instruments">
+		<dt style="background-color:pink;">Weather Forecast Instruments And Inventions That Helped Define How We Predict the Weather
+		<dd><b><br>1.Barometer: weighing the air since the 1600s</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/APRIL/sizes/weather_forecast_barometer1_resize_md.jpg" width="50%"></dd>
+		</dd>
+		
+		<dd><b><br>2. The anemometer measures wind speeds</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/APRIL/sizes/weather_forecast_anemometer_resize_md.JPG" width="50%"></dd>
+		</dd>
+		
+		<dd><b><br>3. Weather balloons take weather forecasting to new heights</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/APRIL/sizes/weather_forecast_balloons_resize_md.jpg" width="50%"></dd>
+		</dd>
+		
+		<dd><b><br>4. The humble thermometer is a vital piece of kit</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/APRIL/sizes/weather_forecast_thermometer1_resize_md.jpg" width="50%"></dd>
+		</dd>
+		
+		<dd><b><br>5. Hygrometer measures indicate relative humidity</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/APRIL/sizes/weather_forecast_hygrometer_resize_md.jpg" width="50%"></dd>
+		</dd>
+		
+		<dd><b><br>6. Weather satellites provide a "space-eye" view</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/MAY/sizes/weather_forecast_satellite_1_resize_md.jpg" width="50%"></dd>
+		</dd>
+		
+		<dd><b><br>7. Pyranometers measure solar irradiance</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/APRIL/sizes/weather_forecast_pyranometer_1_resize_md.jpg" width="50%"></dd>
+		</dd>
+		
+		<dd><b><br>8. Transmissometer help determine local visibility</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/APRIL/sizes/weather_forecast_hazemters_resize_md.jpg" width="50%"></dd>
+		</dd>
+		
+		<dd><b><br>9. Ceilometer can calculate cloud height</b>
+		<dd><img src="https://inteng-storage.s3.amazonaws.com/images/APRIL/sizes/weather_forecast_ceilometer_resize_md.jpg" width="50%"></dd>
+		</dd>
+		<a href="https://mausam.imd.gov.in/imd_latest/contents/all_india_forcast_bulletin.php" target="_blank">For more information visit Government of India site .</a>
+		</dt>
+		</div>
+		
+		
+		</div>
+		
+		<script>
+		function over_heading()
+		{ 
+			document.getElementById('heading').style.color='blue';
+			document.getElementById('heading').style.fontSize='18px';
+		}
+		function out_heading()
+		{
+			document.getElementById('heading').style.color='green';
+			document.getElementById('heading').style.fontSize='15px';
+		} 
+		function change_info1()
+		{
+		var a=document.getElementById('History');
+		var b=document.getElementById('instruments');
+			a.style.display="none";
+			b.style.display="block";
+		}
+		function change()
+		{
+		var a=document.getElementById('History');
+		var b=document.getElementById('instruments');
+			a.style.display="block";
+			b.style.display="none";
+		}
+		
+		</script>
+		
+		<footer id="footer"> 
+			<p>Developed and maintained by CO Department Students - GP Awasari<br>
+			@Copyright 2021 - All Right Reserved.</p>
+			
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+body 
+{
+	Background-image:url("image2.jpg");
+}
+
+.container 
+{
+	margin-top:70px;
+	max-width: 500px;
+	background-color:red
+	border-radius: 10px; 
+	box-shadow: -10px 10px 20px 5px violet,10px -10px 20px 5px violet;
+	text-align:center;
+	border:10px double blue;
+	outline:10px double red;
+	outline-offset: 15px;		
+}
+#weatherwidget 
+{
+	height: 330px;
+	border-radius: 5px;
+}
+.card 
+{
+	width: 100%;
+	color:red;
+}
+.card .card-subtitle 
+{
+	font-size: 4rem;
+}
+.card .cel:after 
+{
+	content: "°C";
+	position: absolute;
+	font-size: 2.5rem;
+	margin-top: 0.3rem;
+	font-weight: 400;
+}
+.card .far:after 
+{
+	content: "°F";
+	position: absolute;
+	font-size: 2.5rem;
+	margin-top: 0.3rem;
+	font-weight: 400;
+}
+.units a 
+{
+	color:red;
+	text-decoration: none;
+}
+.units a.active 
+{
+	color:blue;
+}
